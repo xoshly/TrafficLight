@@ -1,0 +1,78 @@
+body {
+    display: grid;
+    height: 100vh;
+    background: white;
+    place-items: center;
+    margin: 0;
+    animation: color-change-5x 15s ease-in infinite both;
+}
+@keyframes color-change-5x {
+    0% {
+      background: #FFF176;
+    }
+    25% {
+      background: #F9A825;
+    }
+    50% {
+      background: #ea2222;
+    }
+    75% {
+        background: #212121;
+    }
+    100% {
+        background: #FFF59D;
+    }
+  }
+  
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.trafficlight {
+    width: 150px;
+    height: 400px;
+    border: 10px solid black;
+    border-radius: 5%;
+    background: black;
+    position: relative;
+    display: flex;
+
+}
+/* Pole */
+.trafficlight::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 120px;
+    background: black;
+    border: 10px solid black;
+    margin-top: 410px;
+    margin-left: 57px;
+}
+/* Lights */
+.redlight, .yellowlight, .greenlight {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border: 10px solid black;
+    border-radius: 50%;
+    display: flex;
+    background: white;
+}
+.redlight{
+    top: 30px;
+    background: red;
+}
+.yellowlight {
+    top: 155px;
+    background: yellow;
+}
+
+.greenlight {
+    bottom: 30px;
+    background: green;
+}
+
